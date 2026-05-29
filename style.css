@@ -1,82 +1,92 @@
-/* Esempio con un font monospace/pixel-like generico */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background: #000;
-  color: #fff;
-  font-family: 'Press Start 2P', system-ui, sans-serif;
+  height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #050505;
+  color: #f5f5f5;
+  overflow: hidden;
 }
 
-.page {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
+.noise {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.15;
+  mix-blend-mode: screen;
+}
+
+.center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
 }
 
 h1 {
-  text-align: center;
-  margin-bottom: 20px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-size: 28px;
 }
 
-label {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 12px;
-}
-
-textarea {
-  width: 100%;
-  resize: vertical;
-  padding: 8px;
-  border-radius: 4px;
-  border: 2px solid #fff;
-  background: #000;
-  color: #fff;
-  font-family: inherit;
-  font-size: 12px;
+#subtitle {
+  font-size: 14px;
+  opacity: 0.7;
 }
 
 button {
-  margin-top: 10px;
-  padding: 8px 14px;
-  border: 2px solid #fff;
-  background: #000;
-  color: #fff;
-  font-family: inherit;
-  font-size: 12px;
+  margin-top: 16px;
+  padding: 8px 20px;
+  background: transparent;
+  border: 1px solid #f5f5f5;
+  color: #f5f5f5;
+  text-transform: lowercase;
+  letter-spacing: 0.15em;
+  font-size: 11px;
   cursor: pointer;
+  transition: background 0.3s, color 0.3s, transform 0.1s;
 }
 
 button:hover {
-  background: #111;
+  background: #f5f5f5;
+  color: #050505;
 }
 
-.preview-wrapper {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
+button:active {
+  transform: scale(0.97);
 }
 
-/* Box stile dialogo Omori-like */
-.dialogue-box {
-  position: relative;
-  min-width: 400px;
-  max-width: 600px;
-  padding: 18px 24px;
-  border-radius: 6px;
-  background: #101010;
-  border: 3px solid #ffffff;
-  box-shadow: 0 0 0 2px #000;
+.hidden {
+  display: none;
 }
 
-.dialogue-text {
-  font-size: 12px;
-  line-height: 1.6;
-  white-space: pre-wrap; /* per mantenere gli a capo */
+#messageContainer {
+  position: absolute;
+  inset: auto 0 40px 0;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+#messageContainer.visible {
+  display: block;
+  opacity: 1;
+}
+
+.clue {
+  position: fixed;
+  bottom: 8px;
+  left: 8px;
+  font-size: 10px;
+  opacity: 0.4;
 }
