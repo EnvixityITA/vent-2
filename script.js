@@ -13,18 +13,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Messaggio creepy / ARG che vuoi far leggere
   const mainMessage = `
-    non è un caso che tu sia arrivatə qui.
+    per me la vita ultimamente è veramente pesante,
 
-    (qui scrivi tutto il testo che vuoi, anche su più righe)
+    mi sta distruggendo...
   `;
 
   // Frasi che possono comparire in sottotitolo in modo “glitch”
   const glitchSubtitles = [
-    "ti stanno osservando.",
-    "non tornare indietro.",
-    "non dire a nessuno di questo posto.",
-    "sei sicurə di essere solə?",
-    "il rumore non viene da fuori."
+    "non gli sei mai importata.",
+    "ti odiano.",
+    "non sei nulla di speciale.",
+    "rimarrai sola.",
+    "finiscila qui."
   ];
 
   // Imposta il titolo e sottotitolo iniziali
