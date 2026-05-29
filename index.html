@@ -2,26 +2,27 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Omori Style Text</title>
+  <title>vent</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="page">
-    <h1>Omori Style Text</h1>
+  <div class="noise"></div>
 
-    <label for="input-text">Testo da convertire:</label>
-    <textarea id="input-text" rows="4" placeholder="Scrivi qui..."></textarea>
+  <div class="center">
+    <h1 id="title">vent</h1>
+    <p id="subtitle">non dovevi arrivare qui.</p>
 
-    <button id="generate-btn">Genera</button>
-
-    <div class="preview-wrapper">
-      <div class="dialogue-box">
-        <div class="dialogue-text" id="output-text">
-          Qui verrà mostrato il testo in stile Omori.
-        </div>
-      </div>
-    </div>
+    <button id="enterButton">continua</button>
   </div>
+
+  <div id="messageContainer" class="hidden">
+    <p id="mainMessage"></p>
+  </div>
+
+  <!-- Qui puoi aggiungere altri indizi/righe di testo quando vuoi -->
+  <!-- Esempio:
+  <div class="clue">41.8341, 12.4647</div>
+  -->
 
   <script src="script.js"></script>
 </body>
