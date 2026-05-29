@@ -1,15 +1,20 @@
-const input = document.getElementById('input-text');
-const output = document.getElementById('output-text');
-const button = document.getElementById('generate-btn');
+document.addEventListener("DOMContentLoaded", () => {
+  const messageElement = document.getElementById("message");
+  const button = document.getElementById("showMessage");
 
-button.addEventListener('click', () => {
-  const text = input.value.trim();
+  // QUI metti il messaggio che vuoi far leggere alla persona
+  const customMessage = "Ciao, questo sito l'ho fatto per dirti che ci tengo tantissimo a te ❤️";
 
-  if (!text) {
-    output.textContent = 'Inserisci del testo prima.';
-    return;
-  }
+  // Se preferisci più messaggi, usa un array:
+  // const messages = [
+  //   "Messaggio 1 per te...",
+  //   "Messaggio 2 per te...",
+  //   "Messaggio 3 per te..."
+  // ];
+  // E scegli l'indice che vuoi mostrare:
+  // const customMessage = messages[0];
 
-  // Qui potresti aggiungere effetti “glitch/disturbed” se vuoi
-  output.textContent = text;
+  button.addEventListener("click", () => {
+    messageElement.textContent = customMessage;
+  });
 });
